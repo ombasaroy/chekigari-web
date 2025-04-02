@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+{#    Landing page starts here#}
+
+<div class="container ">
+<div class=" landing_page ">
+    <div class="landing_page_div">
+        <img src="{% static 'images/logo2.png' %}" alt="" class="img-fluid mb-4 landing_logo" width="300">
+        {% comment %} <h4 class="m-landing-head" >Track and analyze vehicle accidents efficiently.</h4> {% endcomment %}
+        <p> Log in to access real-time data and insights for vehicle accidents</p>
+        <a href="{% url 'login' %}"><button class="login-btn">Login</button></a>
+        <a href="{% url 'register' %}"><button class="login-btn">Register</button></a>
+
+
+    </div>
+    <div class="landing_img">
+        <img src="{% static 'images/smashed.png' %}" alt="" class="img-fluid" width="400">
+    </div>
+</div>
+</div>
+{#landing page ends here#}
+{% endblock %}

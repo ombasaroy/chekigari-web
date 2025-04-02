@@ -1,0 +1,39 @@
+{% extends 'auth/auth-base.html' %}
+{% load static %}
+<title> {% block title %}  Register {% endblock %}</title> 
+
+{% block content%}
+
+
+<div class="container auth-page">
+
+    <div class="login-container" style="">
+        <img src="{% static 'images/logo2.png' %}" alt="logo" class="img-fluid logo" width="150">
+        <hr>
+        <p class="mt-2">Register to login</p>
+        
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Full Name" required>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="ID Number" required>
+            </div>
+            <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required>
+            </div>
+            <div class="mb-3 position-relative">
+                <input type="password" class="form-control" placeholder="Password" required>
+            </div>
+            <div class="mb-3 position-relative">
+                <input type="password" class="form-control" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit" class="btn btn-login mt-3">Register</button>
+        </form>
+
+        <p class="register-link">Already registered? <a href="{% url 'login' %}">Login now</a></p>
+    </div>
+
+</div>
+
+{% endblock %}

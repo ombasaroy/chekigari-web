@@ -1,0 +1,342 @@
+{% extends 'dashboard/dashboard-base.html' %}
+{% block title %}ChekiGari{% endblock %}
+
+
+
+{% block content%}
+
+{% include 'dashboard/sidebar.html' %}
+
+    <div class="main-content">
+
+      <!-- CARDS -->
+      <div class="container-fluid mt-4">
+        <div class="row">
+          <div class="col-12 col-lg-6 col-xl">
+
+           
+
+            <!-- Card -->
+            <div class="card">
+              <div class="card-body">
+                <!-- Heading -->
+                <h4 class="">
+                  Search for a vehicle
+                </h4>
+                <!-- Form floating -->
+                <div class="form-floating form-group">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="KDF 201F" required>
+                  <label for="floatingInput">eg. KD5 009Y </label>
+                </div>
+
+
+                <!-- Button -->
+                <button type="submit" class="btn btn-primary">Generate Report</button>
+
+              </div>
+            </div>
+
+          </div>
+          
+        </div> <!-- / .row -->
+         <!-- / .row -->
+        <div class="row">
+          <div class="col-12">
+
+            <!-- Goals -->
+            <div class="card">
+              <div class="card-header">
+                <div class="row align-items-center">
+                  <div class="col">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                      My past searches
+                    </h4>
+
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-12 ms-auto pt-4">
+
+                    <!-- Button -->
+                    <form action="" class="search-records">
+                      <div class="form-group">
+                        <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+                        <input type="search" class="form-control" id="search" placeholder="Search previous reports">
+                      </div>
+              
+                    </form>
+
+                  </div>
+                </div> <!-- / .row -->
+              </div>
+              <div class="table-responsive mb-0" data-list="{&quot;valueNames&quot;: [&quot;goal-project&quot;, &quot;goal-status&quot;, &quot;goal-progress&quot;, &quot;goal-date&quot;]}">
+                <table class="table table-sm table-nowrap card-table record-table">
+                  <thead>
+                    <tr>
+                      <th>
+                        <a href="#" class="text-body-secondary list-sort" data-sort="goal-project">
+                          Vehicle Reg. No.
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-body-secondary list-sort" data-sort="goal-status">
+                          Report 
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-body-secondary list-sort" data-sort="goal-progress">
+                          Status
+                        </a>
+                      </th>
+                      <th>
+                        <a href="#" class="text-body-secondary list-sort" data-sort="goal-date">
+                          Date
+                        </a>
+                      </th>
+                      <th class="text-end">
+                        Action
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody class="list">
+                    <tr>
+                      <td class="goal-project">
+                        KAF 201F
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-warning">●</span> Minor
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        KXQ 201
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-danger">●</span> Major
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        KXP 201
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-success">●</span> None
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        KAF 201F
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-warning">●</span> Minor
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        KXQ 201
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-danger">●</span> Major
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="goal-project">
+                        KXP 201
+                      </td>
+                      <td class="goal-status">
+                        <span class="text-success">●</span> None
+                      </td>
+                      <td class="goal-progress">
+                        Successful
+                      </td>
+                      <td class="goal-date">
+                        <time datetime="2018-10-24">6 September 2025</time>
+                      </td>
+                      <td class="text-end">
+                        <a href="">View Report</a>
+                      </td>
+                      <td class="text-end">
+                        <div class="dropdown">
+                          <a href="#" class="dropdown-ellipses dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fe fe-more-vertical"></i>
+                          </a>
+                          <div class="dropdown-menu dropdown-menu-end">
+                            <a href="#!" class="dropdown-item">
+                              Action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Another action
+                            </a>
+                            <a href="#!" class="dropdown-item">
+                              Something else here
+                            </a>
+                          </div>
+                        </div>
+                      </td>
+                    </tr>
+                    
+                  </tbody>
+                  
+                </table>
+              
+                 <div class="pagination p-4">
+                  <p>Showing 10 of 430 records</p>
+                  <!-- Pagination -->
+                  <div class="">
+                    <nav aria-label="Page navigation example">
+                      <ul class="pagination pagination-sm">
+                        <li class="page-item"><a class="page-link" href="#!">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#!">Next</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                 </div>   
+              
+              </div>
+            </div>
+
+          </div>
+        </div> <!-- / .row -->
+       
+      </div>
+
+    </div><!-- / .main-content -->
+    {% endblock %}
