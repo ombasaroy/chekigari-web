@@ -1,4 +1,4 @@
-{% extends "dashboard/dashboard-base.html" %}
+{% extends "dashboard/base.html" %}
 
 {% load static %}
 {% include "dashboard/head.html" %}
@@ -70,7 +70,7 @@
               <div class="col-auto">
 
                 <!-- Help text -->
-                <a href="password-reset-cover.html" class="form-text small text-body-secondary mt-4">
+                <a href="{% url 'reset-password' %}" class="form-text small text-body-secondary mt-4">
                   Forgot password?
                 </a>
 

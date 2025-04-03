@@ -6,14 +6,14 @@ body {
 }
 
 .btn-primary{
-    background-color: #000000;
+    background-color: #252525;
     color: white;
     border: none;
     /* border-radius: 25px; */
 
 }
 .btn-primary:hover{
-    background-color: #f37500;
+    background-color: #000000;
 }
 
 .justify-content-center{
@@ -43,6 +43,19 @@ body {
     font-size: 0.75rem;
 }
 
+
+.login-p{
+    font-size: 0.75rem;
+}
+
+
+.modal-dialog {
+    max-width: 900px; /* Adjust width for a rectangular shape */
+}
+.modal-body img {
+    height: 500px; /* Adjust height for a rectangular shape */
+    object-fit: cover;
+}
 
 
 
