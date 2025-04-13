@@ -1,0 +1,270 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block style %} 
+  <style>
+      .table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+        .table td {
+            padding: 0;
+        }
+        .table img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: none;
+        }
+  </style>
+
+{% endblock %}
+
+{% block title %}Car Report{% endblock %}
+
+
+
+{% block content%}
+
+{% include 'dashboard/sidebar.html' %}
+<div class="main-content">
+
+
+  <!-- Modal with Carousel -->
+<div class="modal" id="imageCarouselModal" tabindex="-1" aria-labelledby="imageCarouselModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Vehicle Accident Images</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="imageCarousel" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                      <div class="carousel-item active">
+                          <img src="{% static 'images/smashed.png' %}" class="img-fluid d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item active">
+                          <img src="{% static 'images/smashed.png' %}" class="img-fluid d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item active">
+                          <img src="{% static 'images/smashed.png' %}" class="img-fluid d-block w-100" alt="">
+                      </div>
+                      <div class="carousel-item active">
+                          <img src="{% static 'images/smashed.png' %}" class="img-fluid d-block w-100" alt="">
+                      </div>
+                  </div>
+                  <!-- Controls -->
+                      <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- CARDS -->
+  <div class="container-fluid mt-4">
+    <div class="row">
+      <div class="col-12 col-lg-6 col-xl">
+
+        <div class="card">
+          <div class="card-body">
+            <div class="row align-items-center">
+              <div class="col">
+
+                <!-- Pretitle -->
+                <h6 class="header-pretitle">
+                  Vehicle Accident History Verification Report
+                </h6>
+
+                <!-- Title -->
+                <h1 class="header-title">
+                  VAHVR #SDF9823KD
+                </h1>
+
+              </div>
+              <div class="col-auto">
+
+                <!-- Buttons -->
+                <a href="#!" class="btn btn-primary lift">
+                  Download
+                </a>
+                {% comment %} <a href="#!" class="btn btn-primary ms-2 lift">
+                  Pay
+                </a> {% endcomment %}
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card -->
+        <div class="card">
+          <div class="card-body">
+            
+            <div class="row">
+              <div class="col text-center">
+
+                <!-- Logo -->
+                <img src="{% static 'images/logo2.png' %}" alt="logo" class="mb-4" width="20%">
+
+                <!-- Title -->
+                {% comment %} <h2 class="mb-2">
+                  Invoice from Dashkit
+                </h2> {% endcomment %}
+
+                <!-- Text -->
+                <p class="text-body-secondary mb-6">
+                  Report ID #SDF9823KD
+                </p>
+
+              </div>
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12 col-md-6">
+
+                <!-- Heading -->
+                <h6 class="text-uppercase text-body-secondary">
+                  Vehicle Details
+                </h6>
+
+                <!-- Text -->
+                <p class="text-body-secondary mb-4">
+                  <strong class="text-body">KFQ 254Y</strong> <br>
+                  Toyota Station Wagon <br>
+                  Black <br>
+                  YOM: 2016
+                </p>
+
+                <!-- Heading -->
+                <h6 class="text-uppercase text-body-secondary">
+                  Date
+                </h6>
+
+                <!-- Text -->
+                <p class="mb-4">
+                  25 September 2024
+                </p>
+
+              </div>
+              {% comment %} <div class="col-12 col-md-6 text-md-end">
+
+                <!-- Heading -->
+                <h6 class="text-uppercase text-body-secondary">
+                  Invoiced to
+                </h6>
+
+                <!-- Text -->
+                <p class="text-body-secondary mb-4">
+                  <strong class="text-body">Jimmy LeBuyer</strong> <br>
+                  Acquisitions at Themers <br>
+                  236 Main St., #201 <br>
+                  Los Angeles, CA
+                </p>
+
+                <!-- Heading -->
+                <h6 class="text-uppercase text-body-secondary">
+                  Due date
+                </h6>
+
+                <!-- Text -->
+                <p class="mb-4">
+                  <time datetime="2018-04-23">Apr 23, 2018</time>
+                </p>
+
+              </div> {% endcomment %}
+
+            </div> <!-- / .row -->
+            <div class="row">
+              <div class="col-12">
+
+                <!-- Table -->
+                <div class="table-responsive">
+                  <table class="table table-hover my-4 img-table">
+                    <thead>
+                      <tr>
+                        <th class="px-0 bg-transparent border-top-0">
+                          <span class="h6">Accident Date</span>
+                        </th>
+                        <th class="px-0 bg-transparent border-top-0">
+                          <span class="h6">Collision Type</span>
+                        </th>
+                        <th class="px-0 bg-transparent border-top-0">
+                          <span class="h6">Damage Severity</span>
+                        </th>
+                        <th class="px-0 bg-transparent border-top-0">
+                          <span class="h6">Description</span>
+                        </th>                          
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="px-0 ">
+                          5 February 2024
+                        </td>
+                        <td class="px-0">
+                          Rear-End
+                        </td>
+                        <td class="px-0">
+                          <div class="badge text-bg-warning">
+                            Moderate
+                          </div>
+                        </td>
+                        <td class="px-0">
+                          Broken lights, damaged doors, deployable airbags
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                            <a href=""><img src="{% static 'images/smashed.png' %}" class="carousel-trigger img-fluid" data-bs-target="#imageCarousel" data-bs-slide-to="0" alt=""></a>
+                        </td>
+                        <td>
+                            <a href=""><img src="{% static 'images/smashed.png' %}" class="carousel-trigger img-fluid" data-bs-target="#imageCarousel" data-bs-slide-to="0" alt=""></a>
+                        </td>
+                        <td>
+                            <a href=""><img src="{% static 'images/smashed.png' %}" class="carousel-trigger img-fluid" data-bs-target="#imageCarousel" data-bs-slide-to="0" alt=""></a>
+                        </td>
+                        <td>
+                            <a href=""><img src="{% static 'images/smashed.png' %}" class="carousel-trigger img-fluid" data-bs-target="#imageCarousel" data-bs-slide-to="0" alt=""></a>
+                        </td>
+                      </tr>
+                    </tbody>
+                    
+                  </table>
+                </div>
+
+                <hr class="my-5">
+
+              </div>
+            </div> <!-- / .row -->
+
+          </div>
+        </div>
+
+      </div>
+      
+    </div> 
+     
+  </div>
+
+</div><!-- / .main-content -->
+
+      {% block scripts %}
+      <script>
+        // Open modal when an image is clicked
+        document.querySelectorAll('.carousel-trigger').forEach((img, index) => {
+            img.addEventListener('click', function () {
+                let modal = new bootstrap.Modal(document.getElementById('imageCarouselModal'));
+                modal.show();
+                document.querySelector('#imageCarousel .carousel-item.active').classList.remove('active');
+                document.querySelectorAll('#imageCarousel .carousel-item')[index].classList.add('active');
+            });
+        });
+      </script>
+      {% endblock %}
+    {% endblock %}

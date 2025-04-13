@@ -1,0 +1,236 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% block title %}Wallet{% endblock %}
+
+
+
+{% block content%}
+
+{% include 'dashboard/sidebar.html' %}
+
+
+
+    <div class="main-content">   
+
+        
+  
+    <!-- Modal -->
+        <div class="modal" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered"> <!-- Centered Modal -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Update phone number</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-12 col-md-12">
+            
+                                <!-- Phone -->
+                                <div class="form-group">
+            
+                                <!-- Input -->
+                                <input type="text" class="form-control mb-3" placeholder="Enter phone number" data-inputmask="'mask': '9999999999'">
+            
+                                </div>       
+                            </div>
+                        </div> <!-- / .row -->
+        
+                        <!-- Button -->
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Update</button>
+                        </div>
+        
+                    </form>
+        
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-12 col-lg-6 col-xl">
+                    <div class="alert alert-danger">
+                        <i class="fe fe-info me-1"></i> You are running low on your balance.
+                    </div>
+                </div>
+            </div> <!-- / .row -->
+
+            <!-- Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="row align-items-center">
+                    <div class="col">
+
+                        <!-- Title -->
+                        <h4 class="card-header-title">
+                        Payment methods
+                        </h4>
+
+                    </div>
+                    {% comment %} <div class="col-auto">
+
+                        <!-- Button -->
+                        <a class="btn btn-sm btn-primary" href="#!">
+                        Add method
+                        </a>
+
+                    </div> {% endcomment %}
+                    </div>
+                </div>
+                <div class="card-body">
+
+                    <!-- List group -->
+                    <div class="list-group list-group-flush my-n3">
+                    <div class="list-group-item">
+                        <div class="row align-items-center">
+                        <div class="col-auto">
+
+                            <!-- Image -->
+                            <img class="img-fluid" src="{% static 'dashboard/img/payment-methods/mpesa.png' %}" alt="..." style="max-width: 38px;">
+
+                        </div>
+                        <div class="col ms-n2">
+
+                            <!-- Heading -->
+                            <h4 class="mb-1">
+                            0729175903
+                            </h4>
+                            <!-- Text -->
+                            <small class="text-body-secondary">
+                            Added on 3/9/2024
+                            </small>
+                        </div>
+
+                        <div class="col-auto me-n3">
+                            <button type="button" class="badge text-bg-light border-0" data-bs-toggle="modal" data-bs-target="#myModal">
+                                Update
+                            </button>
+                        </div>
+                       
+                        </div> <!-- / .row -->
+                    </div>
+                    <div class="list-group-item">
+                        <div class="row align-items-center">
+                        <div class="col-auto">
+
+                            <!-- Image -->
+                            <img class="img-fluid" src="{% static 'dashboard/img/payment-methods/mastercard.svg' %}" alt="..." style="max-width: 38px;">
+
+                        </div>
+                        <div class="col ms-n2">
+
+                            <!-- Heading -->
+                            <h4 class="mb-1">
+                            Mastercard ending in 1234
+                            </h4>
+
+                            <!-- Text -->
+                            <small class="text-body-secondary">
+                            Expires 3/2024
+                            </small>
+
+                        </div>
+
+                        <div class="col-auto me-n3">
+                            <!-- Badge -->
+                            <a class="badge text-bg-light" href="">Update</a>    
+                        </div>
+                        </div> <!-- / .row -->
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+
+                    <!-- Title -->
+                    <h4 class="card-header-title">
+                    Previous transactions
+                    </h4>
+
+                </div>
+                <div class="table-responsive">
+                    <table class="table table-sm table-nowrap card-table">
+                    <thead>
+                        <tr>
+                        <th>Transcation ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="fs-base">
+                        <tr>
+                        <td>
+                            <a href="invoice.html">T4561232WERGH</a>
+                        </td>
+                        <td>
+                            <time datetime="2020-04-24">Apr. 24, 2020</time>
+                        </td>
+                        <td>
+                            1000
+                        </td>
+                        <td>
+                            <span class="badge text-bg-secondary">Outstanding</span>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <a href="invoice.html">T4561232WERGH</a>
+                        </td>
+                        <td>
+                            <time datetime="2020-03-24">Apr. 24, 2020</time>
+                        </td>
+                        <td>
+                            2500
+                        </td>
+                        <td>
+                            <span class="badge text-bg-success">Paid</span>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <a href="invoice.html">T4561232WERGH</a>
+                        </td>
+                        <td>
+                            <time datetime="2020-02-24">Feb. 24, 2020</time>
+                        </td>
+                        <td>
+                            7500
+                        </td>
+                        <td>
+                            <span class="badge text-bg-success">Paid</span>
+                        </td>
+                        </tr>
+                        <tr>
+                        <td>
+                            <a href="invoice.html">T4561232WERGH</a>
+                        </td>
+                        <td>
+                            <time datetime="2020-01-24">Jan. 24, 2020</time>
+                        </td>
+                        <td>
+                            15800
+                        </td>
+                        <td>
+                            <span class="badge text-bg-success">Paid</span>
+                        </td>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div> <!-- / .container-fluid -->
+  
+
+  </div><!-- / .main-content -->
+
+{% endblock %}

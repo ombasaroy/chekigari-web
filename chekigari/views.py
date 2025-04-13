@@ -18,3 +18,28 @@ def user_register(request):
 
 def dashboard(request):
     return render(request, 'dashboard/dashboard.html')
+
+def wallet(request):
+    return render(request, 'dashboard/wallet.html')
+
+
+def reset_password(request):
+    return render(request, 'dashboard/resetpassword.html')
+
+
+def change_password(request):
+    return render(request, 'dashboard/changepassword.html')
+
+
+def my_profile(request):
+    return render(request, 'dashboard/profile.html')
+
+
+def vehicle_report(request):
+    return render(request, 'dashboard/vehicle-report.html')
+
+
+def user_logout(request):
+    return render(request, 'dashboard/logout.html')
+
+

@@ -1,0 +1,233 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+{% block title %}My Profile{% endblock %}
+
+
+
+{% block content%}
+
+{% include 'dashboard/sidebar.html' %}
+
+    <div class="main-content">
+
+        <!-- Modal -->
+  <div class="modal" id="changePhoto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered"> <!-- Centered Modal -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Change profile photo</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+
+  
+  
+                <div class="row">
+                  <div class="col-12 col-md-12">
+  
+                    <!-- Phone -->
+                    <div class="form-group">
+  
+                      <!-- Input -->
+                      <input type="file" accept="image/*" class="form-control mb-3" placeholder="Enter phone number" data-inputmask="'mask': '9999999999'">
+  
+                    </div>
+  
+                  </div>
+                </div> <!-- / .row -->
+  
+                <!-- Button -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Update</button>
+                  </div>
+  
+              </form>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-12 col-lg-10 col-xl-8">
+    
+                <!-- Header -->
+                <div class="header mt-md-5">
+                  <div class="header-body">
+                    <div class="row align-items-center">
+                      <div class="col">
+    
+                        <!-- Title -->
+                        <h1 class="header-title">
+                          My Account
+                        </h1>
+    
+                      </div>
+                    </div> <!-- / .row -->
+                    <div class="row align-items-center">
+                      <div class="col">
+    
+                        <!-- Nav -->
+                        <ul class="nav nav-tabs nav-overflow header-tabs">
+                          <li class="nav-item">
+                            <a href="account-general.html" class="nav-link active">
+                              General
+                            </a>
+                          </li>
+                        </ul>
+    
+                      </div>
+                    </div>
+                  </div>
+                </div>
+    
+                <!-- Form -->
+                <form>
+    
+                  <div class="row justify-content-between align-items-center">
+                    <div class="col">
+                      <div class="row align-items-center">
+                        <div class="col-auto">
+    
+                          <!-- Avatar -->
+                          <div class="avatar">
+                            <img class="avatar-img rounded-circle" src="{% static 'dashboard/img/avatars/profiles/avatar-1.jpg' %}" alt="...">
+                          </div>
+    
+                        </div>
+                        <div class="col ms-n2">
+    
+                          <!-- Heading -->
+                          <h4 class="mb-1">
+                            Your avatar
+                          </h4>
+    
+                          <!-- Text -->
+                          <small class="text-body-secondary">
+                            PNG or JPG no bigger than 1000px wide and tall.
+                          </small>
+    
+                        </div>
+                      </div> <!-- / .row -->
+                    </div>
+                    <div class="col-auto">
+    
+                      <!-- Button -->
+                      <div class="col-auto me-n3">
+                        <button type="button" class="badge text-bg-light border-0" data-bs-toggle="modal" data-bs-target="#changePhoto">
+                            Update
+                        </button>
+                    </div>
+    
+                    </div>
+                  </div> <!-- / .row -->
+    
+                  <!-- Divider -->
+                  <hr class="my-5">
+    
+                  <div class="row">
+                    <div class="col-12 col-md-6">
+    
+                      <!-- First name -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label class="form-label">
+                          First name
+                        </label>
+    
+                        <!-- Input -->
+                        <input type="text" class="form-control" disabled>
+    
+                      </div>
+    
+                    </div>
+                    <div class="col-12 col-md-6">
+    
+                      <!-- Last name -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label class="form-label">
+                          Last name
+                        </label>
+    
+                        <!-- Input -->
+                        <input type="text" class="form-control" disabled>
+    
+                      </div>
+    
+                    </div>
+                    <div class="col-12">
+    
+                      <!-- Email address -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label class="mb-1">
+                          Email address
+                        </label>
+    
+                        <!-- Form text -->
+                        {% comment %} <small class="form-text text-body-secondary">
+                          This contact will be shown to others publicly, so choose it carefully.
+                        </small> {% endcomment %}
+    
+                        <!-- Input -->
+                        <input type="email" class="form-control" disabled>
+    
+                      </div>
+    
+                    </div>
+                    <div class="col-12 col-md-6">
+    
+                      <!-- Phone -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label class="form-label">
+                          Phone
+                        </label>
+    
+                        <!-- Input -->
+                        <input type="text" class="form-control mb-3" placeholder="(0)700000000" data-inputmask="'mask': '(9)999999999'" disabled>
+    
+                      </div>
+    
+                    </div>
+                    <div class="col-12 col-md-6">
+    
+                      <!-- Birthday -->
+                      <div class="form-group">
+    
+                        <!-- Label -->
+                        <label class="form-label">
+                          Birthday
+                        </label>
+    
+                        <!-- Input -->
+                        <input type="text" class="form-control" data-flatpickr disabled>
+    
+                      </div>
+    
+                    </div>
+                  </div> <!-- / .row -->
+    
+                  <!-- Button -->
+                  <button class="btn btn-primary" disabled>
+                    Save changes
+                  </button>
+    
+                </form>
+    
+                <br><br>
+    
+              </div>
+            </div> <!-- / .row -->
+          </div>
+
+    </div><!-- / .main-content -->
+    {% endblock %}

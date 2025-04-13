@@ -13,10 +13,10 @@ body {
 }
 
 .landing_page > div > a > button{
-    color: rgb(0, 0, 0);
-    background-color: #f37500;
+    color: #000000;
+    background-color: transparent;
+    border: 1px solid #000000;
     border-radius: 50px;
-    border: none;;
     padding: 5px 60px;
     margin-top: 5px;
     font-weight: 600;
@@ -26,7 +26,7 @@ body {
 
 .landing_page > div > a > button:hover{
     background-color: #000000;
-    color: #f37500;
+    color: #ffffff;
 }
 
 .register-btn{
